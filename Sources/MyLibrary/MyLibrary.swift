@@ -5,6 +5,7 @@ import Foundation
 import UIKit
 
 
+@available(iOS 13.0, *)
 public struct CustomSDK{
     var window : UIWindow?
     public static func addNum(num1 : Int = 0, num2: Int = 0) -> Int{
@@ -19,7 +20,7 @@ public struct CustomSDK{
     
     static func createViewController() -> FirstViewController {
         let storyboard = UIStoryboard(name: "Storyboard", bundle: Bundle.module)
-        return storyboard.instantiateInitialViewController() as! FirstViewController
+        return storyboard.instantiateViewController(identifier: "FirstViewController") as! FirstViewController
     }
 
     

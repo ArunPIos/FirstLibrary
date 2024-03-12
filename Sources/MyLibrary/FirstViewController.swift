@@ -19,6 +19,7 @@ class FirstViewController: UIViewController {
         self.view.backgroundColor = .black
         self.tabBtn.tintColor = .white
         self.tabBtn.backgroundColor = .systemBlue
+        self.textField.textColor = .white
        
     }
     

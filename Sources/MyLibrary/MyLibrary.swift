@@ -15,9 +15,16 @@ public struct CustomSDK{
         print("Statement")
     }
     
+    
+    
+    static func createViewController() -> FirstViewController {
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: Bundle.module)
+        return storyboard.instantiateInitialViewController() as! FirstViewController
+    }
+
+    
     public static func getFirstScreeen(window: UIWindow){
-        let storyBoard = UIStoryboard(name: "Storyboard", bundle: Bundle.module)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "FirstViewController")
+        let vc = createViewController()
         window.rootViewController = vc
         window.makeKeyAndVisible()
     }

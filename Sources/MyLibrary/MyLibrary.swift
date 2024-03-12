@@ -18,9 +18,9 @@ public struct CustomSDK{
     
     
     
-    static func createViewController() -> FirstViewController {
+    public static func createViewController() -> UIViewController {
         let storyboard = UIStoryboard(name: "Storyboard", bundle: Bundle.module)
-        return storyboard.instantiateViewController(identifier: "FirstViewController") as! FirstViewController
+        return storyboard.instantiateViewController(identifier: "FirstViewController")
     }
 
     
